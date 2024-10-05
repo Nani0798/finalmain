@@ -29,7 +29,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: build container
-        run: docker build -t $(echo Nani0798/finalmain):$(echo $GITHUB_SHA | head -c7) .
+        run: docker build -t $(echo nani0798/finalmain):$(echo $GITHUB_SHA | head -c7) .
 
       - name: docker log in
         uses: docker/login-action@v3
@@ -37,6 +37,6 @@ jobs:
          username: ${{ secrets.DOCKER_USERNAME }}
          password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
 
-         
+
       - name: push image
-        run: docker push $(echo Nani0798/finalmain):$(echo $GITHUB_SHA | head -c7)
+        run: docker push $(echo nani0798/finalmain):$(echo $GITHUB_SHA | head -c7)

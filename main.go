@@ -108,6 +108,7 @@ func main() {
 	store := NewParcelStore(db)
 	service := NewParcelService(store)
 
+	
 	// регистрация посылки
 	client := 1
 	address := "Псков, д. Пушкина, ул. Колотушкина, д. 5"
